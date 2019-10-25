@@ -8,7 +8,8 @@ export const enum STATE {
   ERROR_EXECUTING_COMMAND = 5,
 }
 
-export type Params = { [key: string]: string }
+export type Param = string
+export type Params = { [key: string]: Param }
 
 export type EditingQuery = {
   type: STATE.EDITING_QUERY

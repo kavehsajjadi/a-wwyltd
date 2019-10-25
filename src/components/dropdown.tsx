@@ -5,15 +5,15 @@ export const Dropdown = ({
   items,
   onClick,
 }: {
-  items: { command: Command; ref: React.RefObject<DropdownItem> }[]
+  items: { value: Command; ref: React.RefObject<DropdownItem> }[]
   onClick(c: Command): void
 }) => (
   <DropdownList>
-    {items.map(({ command, ref }) => (
+    {items.map(({ value, ref }) => (
       <DropdownItem
-        key={command[0]}
-        onClick={() => onClick(command)}
-        label={command[0]}
+        key={value[0]}
+        onClick={() => onClick(value)}
+        label={value[0]}
         ref={ref}
       />
     ))}

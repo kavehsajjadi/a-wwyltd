@@ -13,6 +13,12 @@ export class Button extends React.Component<{
     }
   }
 
+  focus() {
+    if (this.buttonRef != null) {
+      this.buttonRef.current.focus()
+    }
+  }
+
   render() {
     const { children, onClick } = this.props
     return (
