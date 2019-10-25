@@ -21,7 +21,7 @@ export class ArgumentInput extends React.Component<ArgumentInputProps> {
     {
       const { autoFocus, label, onChange, value } = this.props
       return (
-        <div key={label}>
+        <div key={label} className="form-group">
           <Input
             ref={this.inputRef}
             autoFocus={autoFocus}

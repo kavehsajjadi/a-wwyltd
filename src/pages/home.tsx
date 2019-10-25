@@ -6,8 +6,12 @@ import { CommandInput } from "components/command_input"
 export const Home = () => {
   return (
     <div>
-      <div style={{ width: "250px" }}>
-        <CommandInput />
+      <div style={{ width: "350px" }}>
+        <div className="card">
+          <div className="card-body">
+            <CommandInput />
+          </div>
+        </div>
       </div>
       {/*<>
         <Card>

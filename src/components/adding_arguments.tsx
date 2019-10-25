@@ -31,11 +31,13 @@ export const AddingArguments = ({ state, setState }: AddingArgumentsProps) => {
 
   return (
     <>
-      <Input
-        value={command[0]}
-        onChange={handleQueryChange(setState)}
-        ref={inputRef}
-      />
+      <div className="form-group">
+        <Input
+          value={command[0]}
+          onChange={handleQueryChange(setState)}
+          ref={inputRef}
+        />
+      </div>
       {items.map((item, index) => {
         const { value, ref } = item
         return (
@@ -49,9 +51,11 @@ export const AddingArguments = ({ state, setState }: AddingArgumentsProps) => {
           />
         )
       })}
-      <Button onClick={setExecuting(setState, command, params)} ref={buttonRef}>
-        Evaluate
-      </Button>
+      <div className="form-group">
+        <Button onClick={setExecuting(setState, command, params)} ref={buttonRef}>
+          Evaluate
+        </Button>
+      </div>
     </>
   )
 }

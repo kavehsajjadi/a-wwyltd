@@ -45,16 +45,15 @@ export class DropdownItem extends React.Component<{
     const { label, onClick } = this.props
 
     return (
-      <div className="dropdown-item">
-        <button
-          ref={this.buttonRef}
-          type="button"
-          onClick={onClick}
-          style={{ background: "none", border: "none" }}
-        >
-          {label}
-        </button>
-      </div>
+      <button
+        className="dropdown-item"
+        ref={this.buttonRef}
+        type="button"
+        onClick={onClick}
+        style={{ background: "none", border: "none" }}
+      >
+        {label}
+      </button>
     )
   }
 }
